@@ -310,23 +310,23 @@
                 timelineTitle: 'The "Sweet Spot" Timeline',
                 timelineDesc: 'ACOG recommends specific intervals between pregnancies to minimize risks. Visualize your optimal timeline below.',
                 riskUnder6Title: 'Under 6 Months',
-                riskUnder6Desc: "Higher risk for Mom & Baby. Uterus hasn't fully healed.",
+                riskUnder6Desc: 'Higher risk for Mom & Baby. Uterus hasn't fully healed.',
                 riskSweetSpotTitle: '18 - 60 Months',
                 riskSweetSpotDesc: 'The "Sweet Spot"! Ideal for health and nutrition.',
                 riskOver5Title: 'Over 5 Years',
                 riskOver5Desc: 'Extended gaps also carry some risks.',
                 whyTitle: 'Why does timing matter? 🤔',
-                whyDesc: "Getting pregnant too soon (short interpregnancy interval) doesn't give your body enough time to recover. Here is what we are protecting against:",
+                whyDesc: 'Getting pregnant too soon (short interpregnancy interval) doesn't give your body enough time to recover. Here is what we are protecting against:',
                 babyCardTitle: 'For the Baby',
                 babyRisk1: '<strong>Preterm Birth:</strong> Arriving too early.',
                 babyRisk2: '<strong>Low Birth Weight:</strong> Growing less than expected.',
                 momCardTitle: 'For the Mom',
-                momRisk1: "<strong>Uterine Rupture Risk:</strong> Especially if you've had a C-section.",
+                momRisk1: '<strong>Uterine Rupture Risk:</strong> Especially if you've had a C-section.',
                 momRisk2: '<strong>Nutritional Depletion:</strong> Your body needs to restock vitamins!',
                 criticalInfo: 'Critical Safety Info',
                 first6WeeksTitle: 'The First 6 Weeks 🩸',
                 first6WeeksDesc1: '<strong>Did you know?</strong> In the first 6 weeks after delivery, your risk of a blood clot is higher than at any other time.',
-                first6WeeksDesc2: "Because of this, we avoid <strong>Estrogen</strong> products (like the regular pill) immediately after birth.",
+                first6WeeksDesc2: 'Because of this, we avoid <strong>Estrogen</strong> products (like the regular pill) immediately after birth.',
                 safeOptionsTitle: 'Safe Options (0-6 Weeks)',
                 depoDesc: 'Shot every 3 months',
                 miniPillTitle: 'Mini-Pill',
@@ -497,6 +497,7 @@
         // --- INITIALIZATION ---
         document.addEventListener('DOMContentLoaded', () => {
             applyLanguage();
+            initChart();
             renderQuizStep();
             initChart();
         });
@@ -537,15 +538,7 @@
 
         // --- CHART INITIALIZATION ---
         function initChart() {
-            if (typeof Chart === 'undefined') {
-                console.warn('Chart.js failed to load; timeline chart disabled.');
-                return;
-            }
-
-            const canvas = document.getElementById('timelineChart');
-            if (!canvas) return;
-
-            const ctx = canvas.getContext('2d');
+            const ctx = document.getElementById('timelineChart').getContext('2d');
 
             const backgroundPlugin = {
                 id: 'customBackground',
