@@ -72,11 +72,12 @@
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <span class="text-2xl">🌸</span>
-                <h1 class="text-xl md:text-2xl font-bold text-pink-600">Family Planning</h1>
+                <h1 id="site-title" class="text-xl md:text-2xl font-bold text-pink-600">Family Planning</h1>
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 items-center">
                 <button onclick="switchTab('learn')" id="nav-learn" class="px-4 py-2 rounded-full font-bold text-sm bg-pink-500 text-white shadow-md transition-colors">Learn</button>
                 <button onclick="switchTab('quiz')" id="nav-quiz" class="px-4 py-2 rounded-full font-bold text-sm bg-white text-pink-500 hover:bg-pink-50 border-2 border-transparent hover:border-pink-200 transition-colors">Quiz</button>
+                <button onclick="toggleLanguage()" id="lang-toggle" class="px-4 py-2 rounded-full font-bold text-sm bg-teal-500 text-white shadow-md hover:bg-teal-600 transition-colors">Español</button>
             </div>
         </div>
     </nav>
@@ -90,11 +91,11 @@
             <!-- Hero -->
             <section class="bg-white rounded-3xl p-8 shadow-lg border-2 border-pink-100 text-center relative overflow-hidden">
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-pink-600 mb-4">Welcome to Your Next Chapter! 🤱</h2>
-                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                    <h2 id="hero-title" class="text-3xl md:text-4xl font-extrabold text-pink-600 mb-4">Welcome to Your Next Chapter! 🤱</h2>
+                    <p id="hero-description" class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
                         Congratulations on your delivery! We encourage all postpartum parents to think about their future family goals now. Taking time to heal is the best gift you can give yourself and your future babies.
                     </p>
-                    <button onclick="scrollToTimeline()" class="mt-6 inline-block bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1">
+                    <button id="hero-cta" onclick="scrollToTimeline()" class="mt-6 inline-block bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1">
                         Why wait? 👇
                     </button>
                 </div>
@@ -106,10 +107,10 @@
             <!-- The Timeline Visualization -->
             <section id="timeline-viz" class="space-y-6">
                 <div class="text-center max-w-2xl mx-auto">
-                    <h3 class="text-2xl font-bold text-pink-700 flex items-center justify-center gap-2">
-                        <span>⏳</span> The "Sweet Spot" Timeline
+                    <h3 id="timeline-title" class="text-2xl font-bold text-pink-700 flex items-center justify-center gap-2">
+                        <span>⏳</span> <span>The "Sweet Spot" Timeline</span>
                     </h3>
-                    <p class="text-slate-600 mt-2">
+                    <p id="timeline-description" class="text-slate-600 mt-2">
                         ACOG recommends specific intervals between pregnancies to minimize risks. Visualize your optimal timeline below.
                     </p>
                 </div>
@@ -123,18 +124,18 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                     <div class="bg-rose-100 p-4 rounded-2xl">
                         <div class="text-2xl">🛑</div>
-                        <h4 class="font-bold text-rose-700">Under 6 Months</h4>
-                        <p class="text-xs text-rose-800">Higher risk for Mom & Baby. Uterus hasn't fully healed.</p>
+                        <h4 id="timeline-zone-1-title" class="font-bold text-rose-700">Under 6 Months</h4>
+                        <p id="timeline-zone-1-desc" class="text-xs text-rose-800">Higher risk for Mom & Baby. Uterus hasn't fully healed.</p>
                     </div>
                     <div class="bg-emerald-100 p-4 rounded-2xl">
                         <div class="text-2xl">✅</div>
-                        <h4 class="font-bold text-emerald-700">18 - 60 Months</h4>
-                        <p class="text-xs text-emerald-800">The "Sweet Spot"! Ideal for health and nutrition.</p>
+                        <h4 id="timeline-zone-2-title" class="font-bold text-emerald-700">18 - 60 Months</h4>
+                        <p id="timeline-zone-2-desc" class="text-xs text-emerald-800">The "Sweet Spot"! Ideal for health and nutrition.</p>
                     </div>
                     <div class="bg-amber-100 p-4 rounded-2xl">
                         <div class="text-2xl">⚠️</div>
-                        <h4 class="font-bold text-amber-700">Over 5 Years</h4>
-                        <p class="text-xs text-amber-800">Extended gaps also carry some risks.</p>
+                        <h4 id="timeline-zone-3-title" class="font-bold text-amber-700">Over 5 Years</h4>
+                        <p id="timeline-zone-3-desc" class="text-xs text-amber-800">Extended gaps also carry some risks.</p>
                     </div>
                 </div>
             </section>
@@ -142,8 +143,8 @@
             <!-- The Why: Risks Section -->
             <section class="space-y-6">
                 <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-pink-100">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6 text-center">Why does timing matter? 🤔</h3>
-                    <p class="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+                    <h3 id="risk-title" class="text-2xl font-bold text-slate-800 mb-6 text-center">Why does timing matter? 🤔</h3>
+                    <p id="risk-description" class="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
                         Getting pregnant too soon (short interpregnancy interval) doesn't give your body enough time to recover. Here is what we are protecting against:
                     </p>
 
@@ -152,14 +153,14 @@
                         <div class="bubble-card bg-blue-50 border-2 border-blue-100 rounded-2xl p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="bg-blue-200 p-2 rounded-full text-2xl">👶</div>
-                                <h4 class="text-xl font-bold text-blue-800">For the Baby</h4>
+                                <h4 id="baby-title" class="text-xl font-bold text-blue-800">For the Baby</h4>
                             </div>
                             <ul class="space-y-3 text-blue-900 font-medium">
                                 <li class="flex items-start gap-2">
-                                    <span>📉</span> <span><strong>Preterm Birth:</strong> Arriving too early.</span>
+                                    <span>📉</span> <span id="baby-risk-1"><strong>Preterm Birth:</strong> Arriving too early.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span>⚖️</span> <span><strong>Low Birth Weight:</strong> Growing less than expected.</span>
+                                    <span>⚖️</span> <span id="baby-risk-2"><strong>Low Birth Weight:</strong> Growing less than expected.</span>
                                 </li>
                             </ul>
                         </div>
@@ -168,14 +169,14 @@
                         <div class="bubble-card bg-pink-50 border-2 border-pink-100 rounded-2xl p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="bg-pink-200 p-2 rounded-full text-2xl">👩</div>
-                                <h4 class="text-xl font-bold text-pink-800">For the Mom</h4>
+                                <h4 id="mom-title" class="text-xl font-bold text-pink-800">For the Mom</h4>
                             </div>
                             <ul class="space-y-3 text-pink-900 font-medium">
                                 <li class="flex items-start gap-2">
-                                    <span>🏥</span> <span><strong>Uterine Rupture Risk:</strong> Especially if you've had a C-section.</span>
+                                    <span>🏥</span> <span id="mom-risk-1"><strong>Uterine Rupture Risk:</strong> Especially if you've had a C-section.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span>🔋</span> <span><strong>Nutritional Depletion:</strong> Your body needs to restock vitamins!</span>
+                                    <span>🔋</span> <span id="mom-risk-2"><strong>Nutritional Depletion:</strong> Your body needs to restock vitamins!</span>
                                 </li>
                             </ul>
                         </div>
@@ -187,37 +188,37 @@
             <section class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-8 shadow-md border-2 border-purple-100">
                 <div class="md:flex gap-8 items-center">
                     <div class="flex-1 space-y-4">
-                        <div class="inline-block bg-purple-200 text-purple-800 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide">Critical Safety Info</div>
-                        <h3 class="text-2xl font-bold text-slate-800">The First 6 Weeks 🩸</h3>
-                        <p class="text-slate-600">
+                        <div id="safety-chip" class="inline-block bg-purple-200 text-purple-800 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wide">Critical Safety Info</div>
+                        <h3 id="weeks-title" class="text-2xl font-bold text-slate-800">The First 6 Weeks 🩸</h3>
+                        <p id="weeks-desc-1" class="text-slate-600">
                             <strong>Did you know?</strong> In the first 6 weeks after delivery, your risk of a blood clot is higher than at any other time.
                         </p>
-                        <p class="text-slate-600">
+                        <p id="weeks-desc-2" class="text-slate-600">
                             Because of this, we avoid <strong>Estrogen</strong> products (like the regular pill) immediately after birth.
                         </p>
                     </div>
                     <div class="flex-1 mt-6 md:mt-0">
                         <div class="bg-white p-6 rounded-2xl shadow-sm">
-                            <h4 class="font-bold text-center text-purple-600 mb-4">Safe Options (0-6 Weeks)</h4>
+                            <h4 id="safe-options-title" class="font-bold text-center text-purple-600 mb-4">Safe Options (0-6 Weeks)</h4>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="text-center p-3 bg-gray-50 rounded-xl hover:bg-purple-50 transition-colors">
                                     <div class="text-3xl mb-2">💉</div>
-                                    <div class="font-bold text-sm">Depo-Provera</div>
-                                    <div class="text-xs text-gray-500">Shot every 3 months</div>
+                                    <div id="safe-option-1-title" class="font-bold text-sm">Depo-Provera</div>
+                                    <div id="safe-option-1-desc" class="text-xs text-gray-500">Shot every 3 months</div>
                                 </div>
                                 <div class="text-center p-3 bg-gray-50 rounded-xl hover:bg-purple-50 transition-colors">
                                     <div class="text-3xl mb-2">💊</div>
-                                    <div class="font-bold text-sm">Mini-Pill</div>
-                                    <div class="text-xs text-gray-500">Daily pill (No estrogen)</div>
+                                    <div id="safe-option-2-title" class="font-bold text-sm">Mini-Pill</div>
+                                    <div id="safe-option-2-desc" class="text-xs text-gray-500">Daily pill (No estrogen)</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="mt-8 text-center">
-                    <p class="text-lg font-bold text-pink-600 mb-4">What about after 6 weeks? Your options open up!</p>
+                    <p id="post-six-weeks" class="text-lg font-bold text-pink-600 mb-4">What about after 6 weeks? Your options open up!</p>
                     <button onclick="switchTab('quiz')" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 flex items-center gap-2 mx-auto">
-                        <span>Take the Options Quiz</span> <span>➡️</span>
+                        <span id="quiz-cta">Take the Options Quiz</span> <span>➡️</span>
                     </button>
                 </div>
             </section>
@@ -256,7 +257,7 @@
                 <!-- Result Container (Hidden initially) -->
                 <div id="result-card" class="hidden bg-white rounded-3xl p-8 shadow-xl border-2 border-pink-100 text-center">
                     <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">💡</div>
-                    <h2 class="text-2xl font-bold text-slate-800 mb-2">We found a match!</h2>
+                    <h2 id="result-heading" class="text-2xl font-bold text-slate-800 mb-2">We found a match!</h2>
                     <h3 id="result-title" class="text-xl font-bold text-pink-600 mb-4">Long-Acting Reversible Contraception (LARC)</h3>
                     
                     <p id="result-desc" class="text-slate-600 mb-6 leading-relaxed">
@@ -264,13 +265,13 @@
                     </p>
 
                     <div class="bg-pink-50 rounded-xl p-6 text-left mb-8">
-                        <h4 class="font-bold text-pink-800 mb-2 flex items-center gap-2"><span>🗣️</span> Ask your doctor about:</h4>
+                        <h4 id="result-doctor-prompt" class="font-bold text-pink-800 mb-2 flex items-center gap-2"><span>🗣️</span> <span>Ask your doctor about:</span></h4>
                         <ul id="result-list" class="space-y-2 text-sm font-medium text-slate-700">
                             <!-- List items injected JS -->
                         </ul>
                     </div>
 
-                    <button onclick="resetQuiz()" class="text-pink-500 font-bold hover:text-pink-700 underline">Start Over</button>
+                    <button id="reset-btn" onclick="resetQuiz()" class="text-pink-500 font-bold hover:text-pink-700 underline">Start Over</button>
                 </div>
             </div>
         </div>
@@ -280,10 +281,10 @@
     <!-- Footer -->
     <footer class="bg-pink-100 py-10 text-center px-4">
         <div class="max-w-2xl mx-auto space-y-4">
-            <p class="font-bold text-pink-800 flex items-center justify-center gap-2">
+            <p id="footer-advice" class="font-bold text-pink-800 flex items-center justify-center gap-2">
                 <span>🩺</span> Always speak with your doctor about your health goals.
             </p>
-            <p class="text-xs text-pink-700/70">
+            <p id="footer-disclaimer" class="text-xs text-pink-700/70">
                 This tool is for educational purposes only. Information based on ACOG guidelines and clinical studies.
             </p>
             <div class="text-xs text-pink-700/50 flex flex-col gap-1">
@@ -299,10 +300,160 @@
         const state = {
             currentTab: 'learn',
             quizStep: 0,
-            answers: []
+            answers: [],
+            language: 'en'
         };
 
-        const quizData = [
+        const translations = {
+            en: {
+                pageTitle: 'Postpartum Family Planning Journey',
+                siteTitle: 'Family Planning',
+                navLearn: 'Learn',
+                navQuiz: 'Quiz',
+                langToggle: 'Español',
+                heroTitle: 'Welcome to Your Next Chapter! 🤱',
+                heroDescription: 'Congratulations on your delivery! We encourage all postpartum parents to think about their future family goals now. Taking time to heal is the best gift you can give yourself and your future babies.',
+                heroCta: 'Why wait? 👇',
+                timelineTitle: 'The "Sweet Spot" Timeline',
+                timelineDescription: 'ACOG recommends specific intervals between pregnancies to minimize risks. Visualize your optimal timeline below.',
+                timelineZone1Title: 'Under 6 Months',
+                timelineZone1Desc: "Higher risk for Mom & Baby. Uterus hasn't fully healed.",
+                timelineZone2Title: '18 - 60 Months',
+                timelineZone2Desc: 'The "Sweet Spot"! Ideal for health and nutrition.',
+                timelineZone3Title: 'Over 5 Years',
+                timelineZone3Desc: 'Extended gaps also carry some risks.',
+                riskTitle: 'Why does timing matter? 🤔',
+                riskDescription: "Getting pregnant too soon (short interpregnancy interval) doesn't give your body enough time to recover. Here is what we are protecting against:",
+                babyTitle: 'For the Baby',
+                babyRisk1: '<strong>Preterm Birth:</strong> Arriving too early.',
+                babyRisk2: '<strong>Low Birth Weight:</strong> Growing less than expected.',
+                momTitle: 'For the Mom',
+                momRisk1: "<strong>Uterine Rupture Risk:</strong> Especially if you've had a C-section.",
+                momRisk2: '<strong>Nutritional Depletion:</strong> Your body needs to restock vitamins!',
+                safetyChip: 'Critical Safety Info',
+                weeksTitle: 'The First 6 Weeks 🩸',
+                weeksDesc1: '<strong>Did you know?</strong> In the first 6 weeks after delivery, your risk of a blood clot is higher than at any other time.',
+                weeksDesc2: 'Because of this, we avoid <strong>Estrogen</strong> products (like the regular pill) immediately after birth.',
+                safeOptionsTitle: 'Safe Options (0-6 Weeks)',
+                safeOption1Title: 'Depo-Provera',
+                safeOption1Desc: 'Shot every 3 months',
+                safeOption2Title: 'Mini-Pill',
+                safeOption2Desc: 'Daily pill (No estrogen)',
+                postSixWeeks: 'What about after 6 weeks? Your options open up!',
+                quizCta: 'Take the Options Quiz',
+                backBtn: 'Back',
+                resultHeading: 'We found a match!',
+                resultDoctorPrompt: 'Ask your doctor about:',
+                resetBtn: 'Start Over',
+                footerAdvice: 'Always speak with your doctor about your health goals.',
+                footerDisclaimer: 'This tool is for educational purposes only. Information based on ACOG guidelines and clinical studies.',
+                questionTracker: (current, total) => `Question ${current} of ${total}`,
+                chartXAxisTitle: 'Months Since Delivery',
+                chartTooltipTitle: (months) => `${months} Months Postpartum`,
+                chartTooltipHealing: 'Healing Phase: Avoid Pregnancy',
+                chartTooltipOptimal: 'Optimal Window for Next Baby',
+                chartTooltipIntermediate: 'Intermediate/Consult Doctor',
+                chartAnnotation1: ['Healing', 'Phase'],
+                chartAnnotation2: ['Ideally wait', '18+ Months'],
+                results: {
+                    done: {
+                        title: 'Permanent or Long-Term Options',
+                        desc: 'Since you feel your family is complete, you might consider permanent options or very long-acting methods.',
+                        listItems: ['Tubal Ligation (Getting tubes tied)', 'Vasectomy (Partner)', 'IUD (Lasts 3-10 years)', 'Nexplanon Implant (Lasts 5 years)']
+                    },
+                    lowMaintenance: {
+                        title: 'Low Maintenance Methods (LARC)',
+                        desc: "If you have a busy life and don't want to worry about a daily pill, these 'Set it and Forget it' methods are perfect.",
+                        listItems: ['Hormonal IUD (Mirena/Kyleena)', 'Copper IUD (Paragard - hormone free)', 'Nexplanon (Arm Implant)', 'Depo Shot (Every 3 months)']
+                    },
+                    shortActing: {
+                        title: 'Short-Acting Methods',
+                        desc: 'Since you plan to conceive again soon and are good with routines, daily or monthly methods give you flexibility to stop whenever you are ready.',
+                        listItems: ['The Pill (Daily)', 'The Patch (Weekly)', 'NuvaRing (Monthly)']
+                    },
+                    fallback: {
+                        title: 'Long-Acting Reversible Contraception',
+                        desc: 'Most doctors recommend LARCs because they are the most effective reversible methods, but pills are great too if you are disciplined!',
+                        listItems: ['Hormonal IUD', 'Nexplanon Implant', 'The Pill', 'Depo Shot']
+                    }
+                }
+            },
+            es: {
+                pageTitle: 'Planificación familiar posparto',
+                siteTitle: 'Planificación Familiar',
+                navLearn: 'Aprender',
+                navQuiz: 'Cuestionario',
+                langToggle: 'English',
+                heroTitle: '¡Bienvenida a tu próxima etapa! 🤱',
+                heroDescription: '¡Felicidades por tu parto! Recomendamos a todas las familias en posparto pensar desde ahora en sus metas familiares futuras. Darse tiempo para sanar es el mejor regalo para ti y para tus futuros bebés.',
+                heroCta: '¿Por qué esperar? 👇',
+                timelineTitle: 'Cronograma del “momento ideal”',
+                timelineDescription: 'ACOG recomienda intervalos específicos entre embarazos para minimizar riesgos. Visualiza tu cronograma óptimo aquí abajo.',
+                timelineZone1Title: 'Menos de 6 meses',
+                timelineZone1Desc: 'Mayor riesgo para mamá y bebé. El útero aún no ha sanado por completo.',
+                timelineZone2Title: '18 - 60 meses',
+                timelineZone2Desc: '¡El “momento ideal”! Mejor para la salud y la nutrición.',
+                timelineZone3Title: 'Más de 5 años',
+                timelineZone3Desc: 'Los intervalos muy largos también tienen algunos riesgos.',
+                riskTitle: '¿Por qué importa el tiempo? 🤔',
+                riskDescription: 'Quedar embarazada demasiado pronto (intervalo intergenésico corto) no le da a tu cuerpo suficiente tiempo para recuperarse. Esto es lo que intentamos prevenir:',
+                babyTitle: 'Para el bebé',
+                babyRisk1: '<strong>Parto prematuro:</strong> Nacer demasiado temprano.',
+                babyRisk2: '<strong>Bajo peso al nacer:</strong> Crecimiento menor al esperado.',
+                momTitle: 'Para la mamá',
+                momRisk1: '<strong>Riesgo de ruptura uterina:</strong> Especialmente si has tenido cesárea.',
+                momRisk2: '<strong>Desgaste nutricional:</strong> ¡Tu cuerpo necesita reponer vitaminas!',
+                safetyChip: 'Información crítica de seguridad',
+                weeksTitle: 'Las primeras 6 semanas 🩸',
+                weeksDesc1: '<strong>¿Sabías?</strong> Durante las primeras 6 semanas después del parto, el riesgo de coágulos es más alto que en cualquier otro momento.',
+                weeksDesc2: 'Por eso evitamos productos con <strong>estrógeno</strong> (como la píldora combinada) inmediatamente después del parto.',
+                safeOptionsTitle: 'Opciones seguras (0-6 semanas)',
+                safeOption1Title: 'Depo-Provera',
+                safeOption1Desc: 'Inyección cada 3 meses',
+                safeOption2Title: 'Mini píldora',
+                safeOption2Desc: 'Píldora diaria (sin estrógeno)',
+                postSixWeeks: '¿Y después de 6 semanas? ¡Tus opciones se amplían!',
+                quizCta: 'Tomar el cuestionario',
+                backBtn: 'Atrás',
+                resultHeading: '¡Encontramos una opción para ti!',
+                resultDoctorPrompt: 'Pregunta a tu doctora o doctor sobre:',
+                resetBtn: 'Empezar de nuevo',
+                footerAdvice: 'Siempre habla con tu médica o médico sobre tus metas de salud.',
+                footerDisclaimer: 'Esta herramienta es solo educativa. Información basada en guías de ACOG y estudios clínicos.',
+                questionTracker: (current, total) => `Pregunta ${current} de ${total}`,
+                chartXAxisTitle: 'Meses desde el parto',
+                chartTooltipTitle: (months) => `${months} meses posparto`,
+                chartTooltipHealing: 'Fase de recuperación: evitar embarazo',
+                chartTooltipOptimal: 'Ventana óptima para el próximo bebé',
+                chartTooltipIntermediate: 'Intermedio / consultar con su médica(o)',
+                chartAnnotation1: ['Fase de', 'recuperación'],
+                chartAnnotation2: ['Idealmente esperar', '18+ meses'],
+                results: {
+                    done: {
+                        title: 'Opciones permanentes o de largo plazo',
+                        desc: 'Si sientes que tu familia está completa, podrías considerar opciones permanentes o métodos de larga duración.',
+                        listItems: ['Ligadura de trompas', 'Vasectomía (pareja)', 'DIU (dura 3-10 años)', 'Implante Nexplanon (dura 5 años)']
+                    },
+                    lowMaintenance: {
+                        title: 'Métodos de bajo mantenimiento (LARC)',
+                        desc: 'Si tienes una vida ocupada y no quieres preocuparte por una píldora diaria, estos métodos de “colocar y olvidar” son ideales.',
+                        listItems: ['DIU hormonal (Mirena/Kyleena)', 'DIU de cobre (Paragard, sin hormonas)', 'Nexplanon (implante en brazo)', 'Inyección Depo (cada 3 meses)']
+                    },
+                    shortActing: {
+                        title: 'Métodos de acción corta',
+                        desc: 'Si planeas un nuevo embarazo pronto y eres buena con las rutinas, los métodos diarios o mensuales te dan flexibilidad para suspenderlos cuando quieras.',
+                        listItems: ['La píldora (diaria)', 'El parche (semanal)', 'Anillo vaginal (mensual)']
+                    },
+                    fallback: {
+                        title: 'Anticoncepción reversible de larga duración',
+                        desc: 'La mayoría de profesionales recomiendan los LARC porque son los métodos reversibles más eficaces, aunque las píldoras también son una buena opción si eres constante.',
+                        listItems: ['DIU hormonal', 'Implante Nexplanon', 'La píldora', 'Inyección Depo']
+                    }
+                }
+            }
+        };
+
+        let quizData = [
             {
                 question: "When are you thinking about having another baby?",
                 options: [
@@ -330,9 +481,12 @@
             }
         ];
 
+        let timelineChart;
+
         // --- CHART INITIALIZATION ---
         document.addEventListener('DOMContentLoaded', () => {
             initChart();
+            applyTranslations();
             renderQuizStep();
         });
 
@@ -360,7 +514,7 @@
                 }
             };
 
-            new Chart(ctx, {
+            timelineChart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: [0, 6, 12, 18, 24, 36, 48, 60, 72],
@@ -385,12 +539,16 @@
                         legend: { display: false },
                         tooltip: {
                             callbacks: {
-                                title: (ctx) => `${ctx[0].parsed.x} Months Postpartum`,
+                                title: (ctx) => {
+                                    const t = translations[state.language];
+                                    return t.chartTooltipTitle(ctx[0].parsed.x);
+                                },
                                 label: (ctx) => {
+                                    const t = translations[state.language];
                                     const x = ctx.parsed.x;
-                                    if(x < 6) return "Healing Phase: Avoid Pregnancy";
-                                    if(x >= 18 && x <= 60) return "Optimal Window for Next Baby";
-                                    return "Intermediate/Consult Doctor";
+                                    if(x < 6) return t.chartTooltipHealing;
+                                    if(x >= 18 && x <= 60) return t.chartTooltipOptimal;
+                                    return t.chartTooltipIntermediate;
                                 }
                             }
                         },
@@ -400,7 +558,7 @@
                                     type: 'label',
                                     xValue: 3,
                                     yValue: 30,
-                                    content: ['Healing', 'Phase'],
+                                    content: translations[state.language].chartAnnotation1,
                                     font: { size: 10, weight: 'bold' },
                                     color: '#be123c'
                                 },
@@ -408,7 +566,7 @@
                                     type: 'label',
                                     xValue: 36,
                                     yValue: 90,
-                                    content: ['Ideally wait', '18+ Months'],
+                                    content: translations[state.language].chartAnnotation2,
                                     font: { size: 12, weight: 'bold' },
                                     color: '#047857'
                                 }
@@ -424,7 +582,7 @@
                         x: {
                             title: {
                                 display: true,
-                                text: 'Months Since Delivery',
+                                text: translations[state.language].chartXAxisTitle,
                                 color: '#ec4899',
                                 font: { weight: 'bold' }
                             },
@@ -434,6 +592,148 @@
                 },
                 plugins: [backgroundPlugin]
             });
+        }
+
+        function toggleLanguage() {
+            state.language = state.language === 'en' ? 'es' : 'en';
+            applyTranslations();
+            renderQuizStep();
+        }
+
+        function applyTranslations() {
+            const t = translations[state.language];
+
+            document.documentElement.lang = state.language;
+            document.title = t.pageTitle;
+
+            const htmlById = {
+                'site-title': t.siteTitle,
+                'hero-title': t.heroTitle,
+                'hero-description': t.heroDescription,
+                'hero-cta': t.heroCta,
+                'timeline-description': t.timelineDescription,
+                'timeline-zone-1-title': t.timelineZone1Title,
+                'timeline-zone-1-desc': t.timelineZone1Desc,
+                'timeline-zone-2-title': t.timelineZone2Title,
+                'timeline-zone-2-desc': t.timelineZone2Desc,
+                'timeline-zone-3-title': t.timelineZone3Title,
+                'timeline-zone-3-desc': t.timelineZone3Desc,
+                'risk-title': t.riskTitle,
+                'risk-description': t.riskDescription,
+                'baby-title': t.babyTitle,
+                'baby-risk-1': t.babyRisk1,
+                'baby-risk-2': t.babyRisk2,
+                'mom-title': t.momTitle,
+                'mom-risk-1': t.momRisk1,
+                'mom-risk-2': t.momRisk2,
+                'safety-chip': t.safetyChip,
+                'weeks-title': t.weeksTitle,
+                'weeks-desc-1': t.weeksDesc1,
+                'weeks-desc-2': t.weeksDesc2,
+                'safe-options-title': t.safeOptionsTitle,
+                'safe-option-1-title': t.safeOption1Title,
+                'safe-option-1-desc': t.safeOption1Desc,
+                'safe-option-2-title': t.safeOption2Title,
+                'safe-option-2-desc': t.safeOption2Desc,
+                'post-six-weeks': t.postSixWeeks,
+                'quiz-cta': t.quizCta,
+                'result-heading': t.resultHeading,
+                'footer-advice': `<span>🩺</span> ${t.footerAdvice}`,
+                'footer-disclaimer': t.footerDisclaimer,
+                'result-desc': state.language === 'es' ? 'Según tus respuestas, esta opción podría ser ideal para ti.' : 'Based on your answers, this might be a great fit.'
+            };
+
+            const textById = {
+                'nav-learn': t.navLearn,
+                'nav-quiz': t.navQuiz,
+                'lang-toggle': t.langToggle,
+                'prev-btn': t.backBtn,
+                'reset-btn': t.resetBtn
+            };
+
+            Object.entries(htmlById).forEach(([id, value]) => {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = value;
+            });
+
+            Object.entries(textById).forEach(([id, value]) => {
+                const el = document.getElementById(id);
+                if (el) el.innerText = value;
+            });
+
+            const timelineTitle = document.getElementById('timeline-title');
+            if (timelineTitle?.children[1]) timelineTitle.children[1].innerText = t.timelineTitle;
+
+            const doctorPrompt = document.getElementById('result-doctor-prompt');
+            if (doctorPrompt?.children[1]) doctorPrompt.children[1].innerText = t.resultDoctorPrompt;
+
+            quizData = getQuizDataForLanguage();
+            if (timelineChart) {
+                timelineChart.options.scales.x.title.text = t.chartXAxisTitle;
+                timelineChart.options.plugins.annotation.annotations.label1.content = t.chartAnnotation1;
+                timelineChart.options.plugins.annotation.annotations.label2.content = t.chartAnnotation2;
+                timelineChart.update();
+            }
+        }
+
+        function getQuizDataForLanguage() {
+            if (state.language === 'es') {
+                return [
+                    {
+                        question: '¿Cuándo estás pensando en tener otro bebé?',
+                        options: [
+                            { text: 'Dentro de 1-2 años', value: 'short' },
+                            { text: 'En 3-5 años', value: 'medium' },
+                            { text: 'Ya no quiero tener más hijos', value: 'done' },
+                            { text: 'Aún no estoy segura', value: 'unsure' }
+                        ]
+                    },
+                    {
+                        question: '¿Qué tan bien recuerdas una rutina diaria?',
+                        options: [
+                            { text: '¡Perfecto! Nunca olvido.', value: 'good' },
+                            { text: 'Más o menos, pero me ocupo mucho.', value: 'fair' },
+                            { text: 'Necesito algo de “poner y olvidar”.', value: 'bad' }
+                        ]
+                    },
+                    {
+                        question: '¿Cómo te sientes con tener menstruación mensual?',
+                        options: [
+                            { text: 'Quiero un ciclo regular.', value: 'regular' },
+                            { text: '¡Me encantaría que se detuviera!', value: 'none' },
+                            { text: 'No me importa mucho.', value: 'neutral' }
+                        ]
+                    }
+                ];
+            }
+
+            return [
+                {
+                    question: 'When are you thinking about having another baby?',
+                    options: [
+                        { text: 'Within 1-2 years', value: 'short' },
+                        { text: 'In 3-5 years', value: 'medium' },
+                        { text: "I'm done having kids", value: 'done' },
+                        { text: "I'm not sure yet", value: 'unsure' }
+                    ]
+                },
+                {
+                    question: 'How good are you at remembering a daily routine?',
+                    options: [
+                        { text: "I'm perfect! I never forget.", value: 'good' },
+                        { text: "I'm okay, but I get busy.", value: 'fair' },
+                        { text: "My brain is mush. I need 'set it and forget it'.", value: 'bad' }
+                    ]
+                },
+                {
+                    question: 'How do you feel about having a monthly period?',
+                    options: [
+                        { text: 'I want a regular cycle.', value: 'regular' },
+                        { text: "I'd love it if they stopped!", value: 'none' },
+                        { text: "I don't really care.", value: 'neutral' }
+                    ]
+                }
+            ];
         }
 
         // --- NAVIGATION LOGIC ---
@@ -476,7 +776,7 @@
             
             // Text
             document.getElementById('question-text').innerText = currentQ.question;
-            document.getElementById('question-tracker').innerText = `Question ${state.quizStep + 1} of ${quizData.length}`;
+            document.getElementById('question-tracker').innerText = translations[state.language].questionTracker(state.quizStep + 1, quizData.length);
             
             // Progress Bar
             const percent = ((state.quizStep) / quizData.length) * 100;
@@ -538,23 +838,23 @@
             let title, desc, listItems;
 
             // LOGIC:
+            const results = translations[state.language].results;
             if (time === 'done') {
-                title = "Permanent or Long-Term Options";
-                desc = "Since you feel your family is complete, you might consider permanent options or very long-acting methods.";
-                listItems = ["Tubal Ligation (Getting tubes tied)", "Vasectomy (Partner)", "IUD (Lasts 3-10 years)", "Nexplanon Implant (Lasts 5 years)"];
+                title = results.done.title;
+                desc = results.done.desc;
+                listItems = results.done.listItems;
             } else if (habit === 'bad' || habit === 'fair') {
-                title = "Low Maintenance Methods (LARC)";
-                desc = "If you have a busy life and don't want to worry about a daily pill, these 'Set it and Forget it' methods are perfect.";
-                listItems = ["Hormonal IUD (Mirena/Kyleena)", "Copper IUD (Paragard - hormone free)", "Nexplanon (Arm Implant)", "Depo Shot (Every 3 months)"];
+                title = results.lowMaintenance.title;
+                desc = results.lowMaintenance.desc;
+                listItems = results.lowMaintenance.listItems;
             } else if (time === 'short' && habit === 'good') {
-                title = "Short-Acting Methods";
-                desc = "Since you plan to conceive again soon and are good with routines, daily or monthly methods give you flexibility to stop whenever you are ready.";
-                listItems = ["The Pill (Daily)", "The Patch (Weekly)", "NuvaRing (Monthly)"];
+                title = results.shortActing.title;
+                desc = results.shortActing.desc;
+                listItems = results.shortActing.listItems;
             } else {
-                // Default fallback
-                title = "Long-Acting Reversible Contraception";
-                desc = "Most doctors recommend LARCs because they are the most effective reversible methods, but pills are great too if you are disciplined!";
-                listItems = ["Hormonal IUD", "Nexplanon Implant", "The Pill", "Depo Shot"];
+                title = results.fallback.title;
+                desc = results.fallback.desc;
+                listItems = results.fallback.listItems;
             }
 
             document.getElementById('result-title').innerText = title;
